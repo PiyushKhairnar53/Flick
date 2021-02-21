@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/mn_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_main"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:elevation="10dp"
+            android:layout_gravity="left|top"
+            android:foregroundGravity="center"
+            app:layout_collapseMode="pin"
+            app:layout_scrollFlags="scroll|enterAlways"
+            android:theme="@style/SearchViewStyle"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            android:background="@color/white">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginStart="-10dp"
+                android:adjustViewBounds="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginRight="50dp"
+                android:src="@drawable/flickwide1"/>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:id="@+id/coorHome"
+        android:layout_below="@+id/mn_app_bar">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:id="@+id/tab_lay"
+            android:backgroundTint="@color/white"
+            android:layout_height="48dp">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.ogaclejapan.smarttablayout.SmartTabLayout
+                android:id="@+id/home_frag_smart_layout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:stl_defaultTabBackground="?attr/selectableItemBackground"
+                app:stl_defaultTabTextColor="@android:color/black"
+                app:stl_distributeEvenly="true"
+                app:stl_dividerThickness="0dp"
+                app:stl_drawDecorationAfterTab="true"
+                app:stl_indicatorColor="@color/colorAccent"
+                app:stl_indicatorCornerRadius="2dp"
+                app:stl_indicatorInterpolation="smart"
+                app:stl_indicatorThickness="4dp"
+                app:stl_overlineThickness="0dp"
+                app:stl_underlineThickness="0dp" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/home_frag_view_pager"
+        android:layout_width="match_parent"
+        android:layout_marginTop="-8dp"
+        android:layout_marginBottom="50dp"
+        android:layout_below="@+id/coorHome"
+        android:layout_height="match_parent" />
+
+
+</RelativeLayout>
+
+

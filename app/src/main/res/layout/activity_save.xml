@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.SaveActivity"
+    android:orientation="vertical">
+
+        <com.ogaclejapan.smarttablayout.SmartTabLayout
+            android:id="@+id/tab_view_pager_fav"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            app:stl_defaultTabBackground="?attr/selectableItemBackground"
+            app:stl_defaultTabTextColor="@android:color/white"
+            app:stl_distributeEvenly="true"
+            app:stl_dividerThickness="0dp"
+            android:layout_below="@+id/app_bar"
+            app:stl_drawDecorationAfterTab="true"
+            android:background="@color/colorTeal"
+            app:stl_indicatorCornerRadius="2dp"
+            app:stl_indicatorInterpolation="smart"
+            app:stl_indicatorThickness="4dp"
+            app:stl_overlineThickness="0dp"
+            app:stl_underlineThickness="0dp" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_pager_fav"
+            android:layout_marginTop="7dp"
+            android:layout_below="@+id/tab_view_pager_fav"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="55dp"
+            android:layout_height="match_parent" />
+
+        <include layout="@layout/bottom_navigation_layout"/>
+
+</RelativeLayout>
+

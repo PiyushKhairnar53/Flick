@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/group2"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_favorites"
+            android:iconTint="@android:color/darker_gray"
+            android:title="Saved"
+            android:icon="@drawable/ic_favorite_black"/>
+        <item
+            android:id="@+id/nav_elon"
+            android:iconTint="@android:color/darker_gray"
+            android:title="Elon Musk"
+            android:icon="@drawable/ic_bathtub"/>
+    </group>
+
+    <group
+        android:id="@+id/group3"
+        android:checkableBehavior="none">
+
+        <item
+            android:id="@+id/nav_about"
+            android:iconTint="@android:color/darker_gray"
+            android:icon="@drawable/ic_info_black"
+            android:title="@string/about" />
+    </group>
+
+</menu>
